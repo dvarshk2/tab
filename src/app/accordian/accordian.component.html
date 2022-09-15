@@ -1,0 +1,39 @@
+<h1 class="bg-success text-center p-4 mt-2">Accordian</h1>
+<div class="container">
+  <div class="col-sm-8 offset-sm-2">
+    <div class="card">
+      <div class="card-header" (click)="frameWork = 'angular'">
+        Angular
+      </div>
+      <div class="card-body deep" [class.active]="frameWork == 'angular'" >
+       <p >
+        <strong>Angular</strong>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora soluta dolorum officiis sapiente, tempore consequatur.
+       </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" (click)="frameWork = 'react'">
+        React
+      </div>
+      <div class="card-body deep" [class.active]="frameWork == 'react'">
+       <p >
+        <strong>React</strong>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora soluta dolorum officiis sapiente, tempore consequatur.
+       </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" (click)="frameWork = 'vue'">
+        Vue
+      </div>
+      <div class="card-body deep" [class.active]="frameWork == 'vue'">
+       <p >
+        <strong>Vue</strong>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora soluta dolorum officiis sapiente, tempore consequatur.
+       </p>
+      </div>
+    </div>
+  
+  </div>
+</div>

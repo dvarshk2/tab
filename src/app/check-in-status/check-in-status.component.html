@@ -1,0 +1,25 @@
+<!-- <p>check-in-status works!</p> -->
+<h1 class="bg-primary text-white p-4 text-center">Passenger check In status</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <ul>
+                <li *ngFor="let passenger of passengers; index as i">
+                    <span [ngStyle]="{'background-color' : getColor(passenger.checkedIn)}"> </span>{{i + 1}}. {{ passenger.fullname}}
+                </li>
+                <!-- <li >
+                    <span> </span>Stephen
+                </li>
+                <li >
+                    <span> </span>Stephen
+                </li>
+                <li >
+                    <span> </span>Stephen
+                </li>
+                <li >
+                    <span> </span>Stephen
+                </li> -->
+            </ul>
+        </div>
+    </div>
+</div>

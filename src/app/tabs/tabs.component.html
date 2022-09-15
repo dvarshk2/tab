@@ -1,0 +1,44 @@
+<h1 class="bg-primary text-center p-4">Tabs and Accordian</h1>
+<div class="container">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link " [ngClass] = "{active : framework ==='angular'}"
+            (click) = "framework = 'angular'"
+            >Angular</a>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link" [ngClass] = "{active : framework === 'react'}"
+            (click) = "framework = 'react'"
+            >React</a>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link" [class.active] = "framework === 'vue'"
+            (click) = "framework = 'vue'"
+            >Vue</a>
+        </li>
+    </ul>
+</div>
+
+<div [ngSwitch] = "framework">
+    <div class="card" *ngSwitchCase = "'angular'">
+        <div class="card-body">
+            <p>
+                <strong>Angular</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, cupiditate temporibus aliquam repellendus laudantium minus!
+            </p>
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase = "'react'">
+        <div class="card-body">
+            <p>
+                <strong>React</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, cupiditate temporibus aliquam repellendus laudantium minus!
+            </p>
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase = "'vue'">
+        <div class="card-body">
+            <p>
+                <strong>Vue</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, cupiditate temporibus aliquam repellendus laudantium minus!
+            </p>
+        </div>
+    </div>
+</div>
